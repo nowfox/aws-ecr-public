@@ -1,12 +1,12 @@
 # Public AWS Elastic Container Registry
-
+本文是对AWS China区域的修改版，Global区域的参见[monken/aws-ecr-public](https://github.com/monken/aws-ecr-public)
 Host any Elastic Container Registry (ECR) publicly on a custom domain using this serverless proxy.
 
 Give it a spin:
 
 ```bash
 # pull a container from a registry named nginx with no authentication
-docker pull v3iomfy255.execute-api.us-east-2.amazonaws.com/nginx:alpine
+docker pull 3bq24dacgg.execute-api.cn-northwest-1.amazonaws.com.cn/nginx:alpine
 ```
 
 ## Solution Overview
@@ -19,9 +19,9 @@ If you would like to make your registries publicly available then this solution 
 
 ## Deploy
 
-[![launch](docs/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home?#/stacks/create/review?filter=active&templateURL=https%3A%2F%2Fs3.us-east-2.amazonaws.com%2Fmonken%2Faws-ecr-public%2Fv1.1.1%2Ftemplate.json&stackName=ecr-public)
+[![launch](docs/launch-stack.svg)](https://cn-northwest-1.console.amazonaws.cn/cloudformation/home?#/stacks/create/review?filter=active&templateURL=https%3a%2f%2fnowfox.s3.cn-northwest-1.amazonaws.com.cn%2faws-ecr-public%2fv1.1.1%2fECR-Public-cn.json&stackName=ECR-public)
 
-[Download Template](https://s3.us-east-2.amazonaws.com/monken/aws-ecr-public/v1.1.1/template.json)
+[Download Template](https://nowfox.s3.cn-northwest-1.amazonaws.com.cn/aws-ecr-public/v1.1.1/ECR-Public-cn.json)
 
 
 ### Template Parameters
@@ -54,7 +54,7 @@ By default all registries in the account and region will be made publicly availa
                 "ecr:BatchGetImage"
             ],
             "NotResource": [
-                "arn:aws:ecr:${AWS::Region}:${AWS::AccountId}:repository/myapp"
+                "arn:aws-cn:ecr:${AWS::Region}:${AWS::AccountId}:repository/myapp"
             ],
             "Effect": "Deny"
         }
