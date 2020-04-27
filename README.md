@@ -1,5 +1,5 @@
 # Public AWS Elastic Container Registry
-本文是对AWS China区域的修改版，Global区域的参见[monken/aws-ecr-public](https://github.com/monken/aws-ecr-public)
+本文是对AWS China区域的修改版，Global区域的参见[monken/aws-ecr-public](https://github.com/monken/aws-ecr-public)  
 Host any Elastic Container Registry (ECR) publicly on a custom domain using this serverless proxy.
 
 Give it a spin:
