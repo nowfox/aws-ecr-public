@@ -76,3 +76,7 @@ make clean # delete CloudFormation stack
 * Cross-account and cross-region access to registries
 * Tag-based permissions
 * Implement additional endpoints for listing images and tags
+
+## 自定义域名
+在API Gateway控制台 自定义域名 创建，选择对应的证书，把域名CNAME指向API Gateway domain name。配置API mappings，需要配置2个Stage，分别为“Stage”和“v2”。如下图所示。
+![自定义域名](docs/custom-domain-name.png)
