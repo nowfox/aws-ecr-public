@@ -6,7 +6,9 @@ Give it a spin:
 
 ```bash
 # pull a container from a registry named nginx with no authentication
-docker pull 3bq24dacgg.execute-api.cn-northwest-1.amazonaws.com.cn/nginx:alpine
+docker pull 96aqz1fb25.execute-api.cn-northwest-1.amazonaws.com.cn/nginx:alpine
+# 使用自定义域名
+docker pull ecr.nowfox.com/nginx:alpine
 ```
 
 ## Solution Overview
